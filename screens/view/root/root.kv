@@ -1,0 +1,32 @@
+#:import Window kivy.core.window.Window
+<RootScreen>
+    name : 'screen'
+    md_bg_color: "#131314"
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        
+        MDBoxLayout:
+            id: nav
+            size_hint: None, 1
+            size: "70dp", 1
+            #md_bg_color: "#303A29"
+            
+        
+        MDBoxLayout:
+            orientation: "vertical"
+            #padding: "12dp"
+            #spacing: "12dp"
+
+            MDLabel:
+                id: label
+                adaptive_height: True
+                text: str(Window.size)
+                font_style: "H5"
+                theme_text_color: "Custom"
+                text_color: "#8A8D79"
+
+            MDScreenManager:
+                id: screen_manager
+
+                        

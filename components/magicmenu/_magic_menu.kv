@@ -1,0 +1,24 @@
+<MenuButton>
+    pos_hint: {"center_y": .5}
+    icon_size: "32sp"
+    
+
+<MagicMenu>
+    size_hint: None, None
+    size: "320dp", "64dp"
+    pos_hint: {"center_x": .5, "center_y": .5}
+    radius: self.height / 2
+    elevation: 8
+    
+    canvas:
+        Color:
+            rgba: 0, 1, 0, 1 # root.color_marker
+        RoundedRectangle:
+            pos: self.x + dp(6) + root.pos_marker, self.y + dp(6)
+            size: self.height - dp(12), self.height - dp(12)
+            radius: [(self.width + dp(12)) / 2] 
+    
+    MDRelativeLayout:
+        id: buttons_container
+        
+    

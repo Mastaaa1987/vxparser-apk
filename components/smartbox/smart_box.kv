@@ -1,0 +1,62 @@
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<M3SpinnerBox>
+    id: spinnerbox
+    md_bg_color: 0,0,0,.0
+    width: "300dp"
+    size_hint: None, 1
+
+
+<M3SmartBox>
+    id: smartbox
+    radius: 24
+    md_bg_color: 0,0,0,.0
+    size: "160dp", "270dp"
+    size_hint: None, None
+    key: root.key
+    image_source: root.image_source
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDBoxLayout:
+            id: header
+            size: "160dp", "20dp"
+            size_hint: None, None
+
+            MDLabel:
+                text: root.header
+                font_size: "14sp"
+                bold: True
+                theme_text_color: "Custom"
+                text_color: "#bcbcbc"
+                halign: 'center'
+                #valign: 'bottom'
+
+        MDBoxLayout:
+            size: "160dp", "5dp"
+            size_hint: None, None
+
+        MDBoxLayout:
+            id: ibox
+            size: "160dp", "210dp"
+            size_hint: None, None
+
+        MDBoxLayout:
+            size: "160dp", "5dp"
+            size_hint: None, None
+
+        MDBoxLayout:
+            id: footer
+            size: "160dp", "20dp"
+            size_hint: None, None
+
+            MDLabel:
+                text: root.footer
+                font_size: "14sp"
+                bold: True
+                theme_text_color: "Custom"
+                text_color: "#bcbcbc"
+                halign: 'center'
+                #valign: 'bottom'
+

@@ -1,0 +1,94 @@
+<FilledButton>
+    md_bg_color: "#2C2E2F"
+    line_color: "#202223"
+    size_hint: None, None
+    height: "36dp"
+    width: "100dp"
+    radius: 24,24
+    pos_hint: {"center_x": .5, "center_y": .5}
+    MDLabel:
+        id: title
+        name: 'title'
+        text: "test"
+        font_style: "H6"
+        bold: True
+        theme_text_color: "Custom"
+        text_color: "#4C4E50"
+
+<FlatButton>
+    text_color: "white"
+    line_color: "grey"
+    text: "Test"
+
+<M3Button>
+    id: button
+    name: root.name
+    text: root.text
+    key: root.key
+    val: root.val
+    text0: root.text0
+    val0: root.val0
+    text_color: "white"
+    line_color: "#202223"
+    line_width: 1.01
+    md_bg_color: "#2C2E2F"
+    on_press: app.callback(self.key, self.val0)
+
+<WideButton>
+    id: button
+    name: 'button'
+    size_hint: 1, None
+    height: self.height
+    divider: None
+    icon: ''
+
+    MDBoxLayout:
+        name: 'bl1'
+        size_hint: 1, 1
+        pos_hint: {"center_x": .5, "center_y": .5}
+        padding: "12dp"
+        radius: 16
+
+        MDBoxLayout:
+            name: 'bl2'
+            orientation: "vertical"
+
+            MDBoxLayout:
+                name: 'bl3'
+                spacing: "6dp"
+
+                MDBoxLayout:
+                    name: 'icon'
+                    width: "20dp"
+                    size_hint: None, 1
+
+                    MDIcon:
+                        pos_hint: {"center_x": .9, "center_y": .5}
+                        id: icon
+                        icon: root.icon
+
+                MDBoxLayout:
+                    name: 'main'
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+
+                        MDLabel:
+                            bold: True
+                            font_size: "12sp"
+                            theme_text_color: "Hint"
+                            id: header
+                            name: 'header'
+
+                        MDLabel:
+                            bold: True
+                            font_size: "16sp"
+                            theme_text_color: "Primary"
+                            id: main
+                            name: 'main'
+
+                MDBoxLayout:
+                    spacing: "6dp"
+                    name: 'action'
+                    id: action
+    

@@ -1,0 +1,52 @@
+
+<OSV1I1@M1ListItem>
+<OSV1I2@M2ListItem>
+<OSV1I3@M3ListItem>
+<OSV1H@ListHeader>
+
+<OSV2I1@M1ListItem>
+<OSV2I2@M2ListItem>
+<OSV2I3@M3ListItem>
+<OSV2H@ListHeader>
+
+<OSV3I1@M1ListItem>
+<OSV3I2@M2ListItem>
+<OSV3I3@M3ListItem>
+<OSV3H@ListHeader>
+
+<OH@Header>
+<OTF@TextField>
+<OSW@M3Switch>
+<OSB@M3Button>
+<OSI@M3SegmentedItem>
+<OMC@M3Chip>
+
+<OMList>
+    id: list
+
+    OH:
+        text: "Main"
+        bold: True
+
+    OSV1H:
+        text: "Server Settings"
+
+    OSV1I2:
+        text1: "FastAPI Server IP"
+        text2: "default: 0.0.0.0 #to listen on all ip's"
+        awidth: "200dp"
+
+        OTF:
+            key: "setting-server_host"
+            hint_text: "0.0.0.0"
+
+    OSV1I2:
+        text1: "FastAPI Server Port"
+        text2: "default: 8080"
+        awidth: "75dp"
+
+        OTF:
+            key: "setting-server_host"
+            hint_text: "8080"
+            awidth: "75dp"
+            input_filter: "int"

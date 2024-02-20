@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Get VoD's & Series",
+        "key": "xstream"
+    },
+    {
+        "title": "Start EPG grabbing",
+        "key": "epg"
+    },
+    {
+        "title": "Create M3u8 List's",
+        "key": "m3u8"
+    },
+    {
+        "title": "Start FastApi Server",
+        "key": "api"
+    }
+]

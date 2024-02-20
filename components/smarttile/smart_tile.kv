@@ -1,0 +1,22 @@
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<M3SmartTile>
+    id: st
+    radius: 16
+    box_position: "footer"
+    box_radius: [0, 0, 16, 16]
+    box_color: 0, 0, 0, .0
+    pos_hint: {"center_x": .5, "center_y": .5}
+    size_hint: None, None
+    size: "150dp", "200dp"
+    source: root.image_source
+    key: root.key
+
+    MDIconButton:
+        id: icon
+        icon: "star-outline"
+        theme_icon_color: "Custom"
+        icon_color: "#FFE500"
+        pos_hint: {"center_x": 1, "center_y": .5}
+        on_release: self.icon = "star" if self.icon == "star-outline" else "star-outline"
+

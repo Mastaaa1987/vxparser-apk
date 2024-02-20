@@ -1,0 +1,88 @@
+#:import Window kivy.core.window.Window
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<MSV1I@M3Card>
+<MSV2I1@M1ListItem>
+<MSV2I2@M2ListItem>
+<MSV2I3@M3ListItem>
+<MSV3I1@M1ListItem>
+<MSV3I2@M2ListItem>
+<MSV3I3@M3ListItem>
+<MSW@M3Switch>
+<MTF@TextField>
+
+<MainScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: "12dp"
+        size_hint: 1, 1
+        md_bg_color: "#131314"
+        spacing: "10dp"
+        #padding: "10dp"
+
+        MDScrollView:
+            pos_hint: {"center_x": .5, "center_y": .5}
+            do_scroll_y: False
+            size_hint: 1, None
+            height: "200dp"
+            bar_width: dp(0)
+
+            MDGridLayout:
+                pos_hint: {"center_x": .5, "center_y": .5}
+                id: gl1
+                rows: 1
+                spacing: "20dp"
+                padding: "10dp"
+                size_hint: None, None
+                height: "500dp"
+                width: self.minimum_width
+                bar_width: dp(0)
+
+
+        MDBoxLayout:
+            size_hint: 1, .1
+
+            MDBoxLayout:
+                size_hint: .5, .1
+                Header:
+                    text: "Log:"
+                    font_style: "H6"
+                    bold: True
+
+            MDBoxLayout:
+                size_hint: .5, .1
+                Header:
+                    text: "Messages:"
+                    font_style: "H6"
+                    bold: True
+
+        MDBoxLayout:
+            size_hint: 1, 1
+
+            MDBoxLayout:
+                size_hint: .5, 1
+
+                MDScrollView:
+                    size_hint: 1, 1
+                    padding: "12dp"
+                    pos_hint: {"center_y": .5}
+                    bar_width: dp(0)
+
+                    MDList:
+                        id: list2
+                        pos_hint: {"center_x": .5, "center_y": 1}
+
+
+            MDBoxLayout:
+                size_hint: .5, 1
+
+                MDScrollView:
+                    size_hint: 1, 1
+                    padding: "12dp"
+                    pos_hint: {"center_y": .5}
+                    bar_width: dp(0)
+
+                    MDList:
+                        id: list3
+                        pos_hint: {"center_x": .5, "center_y": 1}
+

@@ -1,0 +1,12 @@
+<M3Chip>
+    name: root.name
+    key: root.key
+    val: root.val
+    text_color: "#FFFFFF"
+    selected_color: "#303A29"
+    on_active: app.callback(self.key, '1') if self.active else app.callback(self.key, '0')
+    line_color: "grey"
+    md_bg_color: (0,0,0,.0)
+
+    MDChipText:
+        text: root.text

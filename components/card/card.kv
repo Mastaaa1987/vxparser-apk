@@ -1,0 +1,87 @@
+<SW@M3Switch>
+
+<M3Card>
+    id: card
+    name: 'card'
+    active: False
+    md_bg_color: "#202224"
+    key: root.key
+    pos_hint: {"center_y": .5}
+
+    MDBoxLayout:
+        padding: "12dp"
+
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: "8dp"
+
+            MDBoxLayout:
+                id: header
+                size_hint: 1, None
+                height: "40dp"
+
+            MDBoxLayout:
+                id: main
+
+                MDLabel:
+                    id: title
+                    text: root.text
+                    font_style: "H6"
+                    bold: True
+                    theme_text_color: "Custom"
+                    text_color: "#bcbcbc"
+
+            MDBoxLayout:
+                id: footer
+                size_hint: 1, None
+                height: "24dp"
+
+                MDLabel:
+                    id: title
+                    text: root.info
+                    font_style: "H6"
+                    bold: True
+                    theme_text_color: "Custom"
+                    text_color: "#4c4e50"
+
+        MDBoxLayout:
+            id: action
+            width: "56dp"
+            size_hint: None, 1
+
+
+<MST@M3SmartTile>
+
+<M3SmartCard>
+    id: smartcard
+    radius: 24
+    md_bg_color: "#202224"
+    size: "160dp", "210dp"
+    size_hint: None, None
+    style: "elevated"
+    spacing: "5dp"
+    padding: "5dp"
+    key: root.key
+    sv: root.sv
+    image_source: root.image_source
+
+    MDBoxLayout:
+        id: image
+        size: "150dp", "200dp"
+        size_hint: None, None
+
+        #MST
+
+    MDBoxLayout:
+        id: hidden
+        size_hint: None, None
+
+        MDLabel:
+            text: root.text
+            hidden: root.hidden
+            font_size: "14sp"
+            bold: True
+            theme_text_color: "Custom"
+            text_color: "#bcbcbc"
+            halign: 'center'
+

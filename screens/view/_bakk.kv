@@ -1,0 +1,37 @@
+<UserCard>
+    adaptive_height: True
+    md_bg_color: "#343930"
+    radius: 16
+
+    ListItem:
+        id: item
+        divider: None
+        _no_ripple_effect: True
+        text: root.name
+        secondary_text: root.path_to_file
+        theme_text_color: "Custom"
+        text_color: "#8A8D79"
+        secondary_theme_text_color: self.theme_text_color
+        secondary_text_color: self.text_color
+        on_size:
+            self.ids._left_container.size = (item.height, item.height)
+            self.ids._left_container.x = dp(6)
+            self._txt_right_pad = item.height + dp(12)
+
+        ImageLeftWidget:
+            source: root.album
+            radius: root.radius
+
+RecycleView:
+    id: card_list
+    viewclass: "UserCard"
+    bar_width: 0
+
+    RecycleBoxLayout:
+        orientation: 'vertical'
+        spacing: "16dp"
+        padding: "16dp"
+        default_size: None, dp(72)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height

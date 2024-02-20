@@ -1,0 +1,192 @@
+<TF@TextField>
+
+<ListHeader>
+    id: listheader
+    size_hint: 1, None
+    height: "52dp"
+    divider: None
+
+    MDBoxLayout:
+        pos_hint: {"center_x": .5, "center_y": .5}
+        orientation: "vertical"
+
+        MDBoxLayout:
+            size_hint: 1, None
+            height: "2dp"
+            md_bg_color: "gray"
+
+        MDBoxLayout:
+            size_hint: 1, None
+            height: "48dp"
+            padding: "12dp"
+            md_bg_color: "#202224"
+
+            MDLabel:
+                id: title
+                text: root.text
+                font_style: "H6"
+                bold: True
+                theme_text_color: "Custom"
+                text_color: "#4C4E50"
+
+        MDBoxLayout:
+            size_hint: 1, None
+            height: "2dp"
+            md_bg_color: "gray"
+
+
+<M1ListItem>
+    id: listitem
+    size_hint: 1, None
+    ripple_alpha: .0
+    height: "56dp"
+    divider: None
+
+    MDBoxLayout:
+        name: 'bl1'
+        size_hint: 1, 1
+        pos_hint: {"center_x": .5, "center_y": .5}
+        padding: "12dp"
+        radius: 16
+
+        MDBoxLayout:
+            orientation: "vertical"
+
+            MDBoxLayout:
+
+                MDLabel:
+                    font_size: "16sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color1
+                    id: title
+                    text: root.text1
+
+        MDBoxLayout:
+            spacing: "6dp"
+            id: action
+            size_hint: None, 1
+            width: root.awidth
+            pos_hint_x: 1
+
+
+<M2ListItem>
+    id: listitem
+    size_hint: 1, None
+    ripple_alpha: .0
+    height: "56dp"
+    divider: None
+
+    MDBoxLayout:
+        name: 'bl1'
+        size_hint: 1, 1
+        pos_hint: {"center_x": .5, "center_y": .5}
+        padding: "12dp"
+        radius: 16
+
+        MDBoxLayout:
+            orientation: "vertical"
+
+            MDBoxLayout:
+
+                MDLabel:
+                    font_size: "16sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color1
+                    id: title
+                    text: root.text1
+
+            MDBoxLayout:
+
+                MDLabel:
+                    bold: True
+                    font_size: "12sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color2
+                    id: subtitle
+                    text: root.text2
+
+        MDBoxLayout:
+            spacing: "6dp"
+            id: action
+            size_hint: None, 1
+            width: root.awidth
+            pos_hint_x: 1
+
+
+<M3ListItem>
+    id: listitem
+    size_hint: 1, None
+    ripple_alpha: .0
+    height: "80dp"
+    divider: None
+
+    MDBoxLayout:
+        name: 'bl1'
+        size_hint: 1, 1
+        pos_hint: {"center_x": .5, "center_y": .5}
+        padding: "12dp"
+        radius: 16
+
+        MDBoxLayout:
+            orientation: "vertical"
+
+            MDBoxLayout:
+
+                MDLabel:
+                    font_size: "14sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color0
+                    id: overline
+                    text: root.text0
+
+            MDBoxLayout:
+
+                MDLabel:
+                    font_size: "16sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color1
+                    id: title
+                    text: root.text1
+
+            MDBoxLayout:
+
+                MDLabel:
+                    bold: True
+                    font_size: "12sp"
+                    theme_text_color: "Custom"
+                    text_color: root.color2
+                    id: subtitle
+                    text: root.text2
+
+        MDBoxLayout:
+            spacing: "6dp"
+            id: action
+            size_hint: None, 1
+            width: root.awidth
+            pos_hint_x: 1
+
+
+<X1ListItem>
+    id: listitem
+    size_hint: 1, None
+    ripple_alpha: .0
+    height: "56dp"
+    divider: None
+
+    MDBoxLayout:
+        size_hint: 1, 1
+        pos_hint: {"center_x": .5, "center_y": .5}
+        padding: "12dp"
+        radius: 16
+
+        MDBoxLayout:
+            id: action
+            size_hint: 1, 1
+            #width: "200dp"
+            pos_hint_x: 1
+            spacing: "6dp"
+
+            TF:
+                key: 'xstream-global_search'
+                hint_text: 'Global Search'
+

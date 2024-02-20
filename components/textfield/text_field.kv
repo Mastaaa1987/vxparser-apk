@@ -1,0 +1,21 @@
+<TextField>
+    id: textfield
+    name: root.name
+    helper_text: root.helper_text
+    key: root.key
+    hint_text: root.hint_text
+    hidden: root.hidden
+    hhidden: root.hhidden
+    on_focus: if not self.focus: app.callback(self.key, self.text, self)
+    size_hint_x: .5
+    mode: "round"
+    input_filter: None
+    helper_text_mode: "on_error"
+    fill_color_normal: "#1B1B1B"
+    fill_color_focus: "#353739"
+    text_color_focus: "white"
+    text_color_normal: "white"
+    hint_text_color_normal: "gray"
+    text_color: "white"
+    line_color_focus: "darkorange"
+    line_color_normal: "gray"

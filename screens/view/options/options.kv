@@ -1,0 +1,54 @@
+#:import FocusWithColor applib.focus.FocusWithColor
+<OSV1I1@M1ListItem>
+<OSV1I2@M2ListItem>
+<OSV1I3@M3ListItem>
+<OSV1H@ListHeader>
+<OSV2I1@M1ListItem>
+<OSV2I2@M2ListItem>
+<OSV2I3@M3ListItem>
+<OSV2H@ListHeader>
+<OSV3I1@M1ListItem>
+<OSV3I2@M2ListItem>
+<OSV3I3@M3ListItem>
+<OSV3H@ListHeader>
+<OH@Header>
+<OTF@TextField>
+<OSW@M3Switch>
+<OSB@M3Button>
+<OSV0I@M3SegmentedItem>
+<OMC@M3Chip>
+
+<OptionScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 1, 1
+        md_bg_color: "#131314"
+
+        MDSegmentedButton:
+            id: segment
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint_x: .9
+            selected_color: "#303A29"
+            line_color: "#343930"
+            line_width: 1.02
+            on_marked: app.on_marked(*args)
+
+            OSV0I:
+                text: 'Main'
+                key: 'main'
+
+            OSV0I:
+                text: 'Vavoo'
+                key: 'vavoo'
+
+            OSV0I:
+                text: 'Xstream'
+                key: 'xstream'
+
+        MDScrollView:
+            id: scrollview
+            name: 'scrollview'
+
+            MDList:
+                id: list
+

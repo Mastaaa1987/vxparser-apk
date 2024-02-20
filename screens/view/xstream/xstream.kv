@@ -1,0 +1,61 @@
+#:import Window kivy.core.window.Window
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<XSV0LI@X1ListItem>
+<XSV1ST@M3SmartTile>
+<XSV1SB@M3SmartBox>
+<XSV1SC@M3SmartCard>
+<XSS@M3SpinnerBox>
+<XS@M3Spinner>
+<XLV1I1@M1ListItem>
+<XLV1I2@M2ListItem>
+<XLV1I3@M3ListItem>
+
+<XstreamScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: "12dp"
+        size_hint: 1, 1
+        md_bg_color: "#131314"
+
+        MDScrollView:
+            #padding: "12dp"
+            height: "75dp"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .1}
+
+            MDList:
+                id: list1
+                #padding: "12dp"
+
+                XSV0LI:
+                    id: li1
+
+        MDScrollView:
+            id: sv1
+            pos_hint: {"center_x": .5, "center_y": .5}
+            do_scroll_y: False
+            size_hint: 1, None
+            height: "275dp"
+            bar_width: dp(0)
+
+            MDGridLayout:
+                id: gl1
+                rows: 1
+                spacing: "20dp"
+                size_hint: None, None
+                width: self.minimum_width
+                bar_width: dp(0)
+
+        MDBoxLayout:
+            size_hint: 1, 1
+
+            MDScrollView:
+                size_hint: 1, 1
+                padding: "12dp"
+                pos_hint: {"center_y": .5}
+                bar_width: dp(0)
+
+                MDList:
+                    id: lv1
+                    pos_hint: {"center_x": .5, "center_y": 1}

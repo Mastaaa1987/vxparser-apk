@@ -1,0 +1,24 @@
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<M3ScrollView>
+    pos_hint: {"center_x": .5, "center_y": .5}
+    do_scroll_y: False
+    size_hint: 1, None
+    height: "320dp"
+    bar_width: dp(0)
+
+
+<M3SmartView>
+    pos_hint: {"center_x": .5, "center_y": .5}
+    do_scroll_y: False
+    size_hint: 1, None
+    height: "300dp"
+    bar_width: dp(0)
+
+    MDGridLayout:
+        id: gl
+        rows: 1
+        spacing: "20dp"
+        size_hint: None, 1
+        width: self.minimum_width
+        bar_width: dp(0)

@@ -1,0 +1,193 @@
+[
+    {
+        "type": "title",
+        "title": "Server Settings",
+        "section": "Main"
+    },
+    {
+        "type": "string",
+        "title": "FastAPI Server IP",
+        "desc": "default: 0.0.0.0 #to listen on all ip's",
+        "section": "Main",
+        "key": "server_host",
+        "default": "0.0.0.0"
+    },
+    {
+        "type": "numeric",
+        "title": "FastAPI Server Port",
+        "desc": "default: 8080",
+        "section": "Main",
+        "key": "server_port",
+        "default": 8080
+    },
+    {
+        "type": "bool",
+        "title": "Set Automatic Network IP to Server IP",
+        "desc": "default: True",
+        "section": "Main",
+        "key": "server_service",
+        "default": 1
+    },
+    {
+        "type": "string",
+        "title": "Server IP for M3U8 List Creation",
+        "desc": "(If Set Automatic Network IP to Server IP to False)",
+        "section": "Main",
+        "key": "server_ip"
+    },
+    {
+        "type": "title",
+        "title": "Misc Settings",
+        "section": "Main"
+    },
+    {
+        "type": "select",
+        "title": "LogLevel",
+        "desc": "default: Error",
+        "section": "Main",
+        "key": "log_lvl",
+        "selection": "{\"1\": \"Info\", \"3\": \"Error\"}",
+        "default": "3"
+    },
+    {
+        "type": "bool",
+        "title": "Search in TMDB after VoD & Series Infos",
+        "desc": "default: False",
+        "head": "Verlangsamt den Get New VoD's & Series Prozess!",
+        "section": "Main",
+        "key": "get_tmdb",
+        "default": 0
+    },
+    {
+        "type": "select",
+        "title": "Bevorzugter codec für Xtream Codes",
+        "desc": "default: ts",
+        "section": "Main",
+        "key": "xtream_codec",
+        "selection": "{\"t\": \"ts\", \"h\": \"hls\"}",
+        "default": "t"
+    },
+    {
+        "type": "title",
+        "title": "SerienStream Accound (s.to)",
+        "section": "Main"
+    },
+    {
+        "type": "string",
+        "title": "Username",
+        "desc": "SerienStream (s.to)",
+        "section": "Main",
+        "key": "serienstream_username"
+    },
+    {
+        "type": "string",
+        "title": "Password",
+        "desc": "SerienStream (s.to)",
+        "section": "Main",
+        "key": "serienstream_password"
+    },
+    {
+        "type": "title",
+        "title": "Live TV Settings",
+        "section": "Vavoo"
+    },
+    {
+        "type": "bool",
+        "title": "Automatic M3U8 List Creation for LiveTV",
+        "desc": "default: False",
+        "head": "Background Service",
+        "section": "Vavoo",
+        "key": "m3u8_service",
+        "default": 0
+    },
+    {
+        "type": "numeric",
+        "title": "Warte Zeit für M3U8 List Creation",
+        "head": "Background Service Wartezeit in Stunden",
+        "desc": "default: 12",
+        "section": "Vavoo",
+        "key": "m3u8_sleep",
+        "default": 12
+    },
+    {
+        "type": "bool",
+        "title": "Generate HLS M3U8",
+        "desc": "default: True",
+        "head": "Generiert 2. M3U8 Liste (<county>_hls.m3u8)",
+        "section": "Vavoo",
+        "key": "m3u8_hls",
+        "default": 1
+    },
+    {
+        "type": "bool",
+        "title": "Vavoo Channel Namen ersetzen",
+        "desc": "default: True",
+        "head": "Ändert die Anzeigenamen in M3U8 List's",
+        "section": "Vavoo",
+        "key": "m3u8_name",
+        "default": 1
+    },
+    {
+        "type": "title",
+        "title": "Programm Zeitschrift (EPG)",
+        "section": "Vavoo"
+    },
+    {
+        "type": "select",
+        "title": "Provider to get EPG Infos",
+        "desc": "default: Magenta",
+        "section": "Vavoo",
+        "key": "epg_provider",
+        "selection": "{\"m\": \"Magenta\", \"t\": \"TvSpielfilme\"}",
+        "default": "m"
+    },
+    {
+        "type": "bool",
+        "title": "Provider IDs mit Rytec IDs ersetzen",
+        "desc": "default: True",
+        "section": "Vavoo",
+        "key": "epg_rytec",
+        "default": 1
+    },
+    {
+        "type": "select",
+        "title": "Bevorzugte Channel Logos",
+        "desc": "default: Provider",
+        "section": "Vavoo",
+        "key": "epg_logos",
+        "selection": "{\"o\": \"Original\", \"p\": \"Provider\"}",
+        "default": "p"
+    },
+    {
+        "type": "title",
+        "title": "EPG Service Settings",
+        "section": "Vavoo"
+    },
+    {
+        "type": "bool",
+        "title": "Start Automatic epg.xml.gz Creation for LiveTV",
+        "desc": "default: False",
+        "head": "Background Service",
+        "section": "Vavoo",
+        "key": "epg_service",
+        "default": 0
+    },
+    {
+        "type": "numeric",
+        "title": "Wartezeit für epg.xml.gz Creation Service",
+        "desc": "default: 5",
+        "head": "Background Service Wartezeit in Tagen",
+        "section": "Vavoo",
+        "key": "epg_sleep",
+        "default": 5
+    },
+    {
+        "type": "numeric",
+        "title": "Anzahl an Tagen für epg.xml.gz Erstellung",
+        "desc": "default: 7",
+        "head": "Background Service Grabbing Zeit in Tagen",
+        "section": "Vavoo",
+        "key": "epg_grab",
+        "default": 7
+    }
+]

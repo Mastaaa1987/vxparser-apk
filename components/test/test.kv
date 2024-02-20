@@ -1,0 +1,231 @@
+#:import FocusWithColor applib.focus.FocusWithColor
+<OSV1I1@M1ListItem>
+<OSV1I2@M2ListItem>
+<OSV1I3@M3ListItem>
+<OSV1H@ListHeader>
+<OSV2I1@M1ListItem>
+<OSV2I2@M2ListItem>
+<OSV2I3@M3ListItem>
+<OSV2H@ListHeader>
+<OSV3I1@M1ListItem>
+<OSV3I2@M2ListItem>
+<OSV3I3@M3ListItem>
+<OSV3H@ListHeader>
+<OH@Header>
+<OTF@TextField>
+<OSW@M3Switch>
+<OSB@M3Button>
+<OSV0I@M3SegmentedItem>
+<OMC@M3Chip>
+
+<Test>:
+    OH:
+        text: 'Main'
+
+    OSV1H:
+        text: 'Server Settings'
+
+    OSV1I2:
+        text1: 'FastAPI Server IP'
+        text2: 'default: 0.0.0.0 #to listen on all ips'
+
+        OTF:
+            key: 'setting-server_host'
+            hint_text: "0.0.0.0"
+
+    OSV1I2:
+        text1: 'FastAPI Server Port'
+        text2: 'default: 8080'
+        awidth: "75dp"
+
+        OTF:
+            input_filter: "int"
+            awidth: "75dp"
+            key: 'setting-server_port'
+            hint_text: "8080"
+
+    OSV1I2:
+        text1: 'Set Automatic Network IP to Server IP'
+        text2: 'default: True'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-server_service'
+
+    OSV1I2:
+        text1: 'Server IP for M3U8 List Creation'
+        text2: '(If Set Automatic Network IP to Server IP to False)'
+        awidth: "200dp"
+
+        OTF:
+            key: 'setting-server_ip'
+
+    OSV1H:
+        text: 'Misc Settings'
+
+    OSV1I2:
+        text1: 'LogLevel'
+        text2: 'default: Error'
+        awidth: "75dp"
+
+        OSB:
+            key: 'setting-log_lvl'
+            text: 'Error'
+            val: '3'
+            text0: 'Info'
+            val0: '1'
+
+    OSV1I3:
+        text1: 'Search in TMDB after VoD & Series Infos'
+        text2: 'default: False'
+        text0: 'Verlangsamt den Get New VoDs & Series Prozess!'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-get_tmdb'
+
+    OSV1I2:
+        text1: 'Bevorzugter codec für Xtream Codes'
+        text2: 'default: ts'
+        awidth: "75dp"
+
+        OSB:
+            key: 'setting-xtream_codec'
+            text: 'ts'
+            val: 't'
+            text0: 'hls'
+            val0: 'h'
+
+    OSV1H:
+        text: 'SerienStream Accound (s.to)'
+
+    OSV1I2:
+        text1: 'Username'
+        text2: 'SerienStream (s.to)'
+
+        OTF:
+            key: 'setting-serienstream_username'
+
+    OSV1I2:
+        text1: 'Password'
+        text2: 'SerienStream (s.to)'
+
+        OTF:
+            key: 'setting-serienstream_password'
+
+    OH:
+        text: 'Vavoo'
+
+    OSV2H:
+        text: 'Live TV Settings'
+
+    OSV2I3:
+        text1: 'Automatic M3U8 List Creation for LiveTV'
+        text2: 'default: False'
+        text0: 'Background Service'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-m3u8_service'
+
+    OSV2I3:
+        text1: 'Warte Zeit für M3U8 List Creation'
+        text0: 'Background Service Wartezeit in Stunden'
+        text2: 'default: 12'
+        awidth: "75dp"
+
+        OTF:
+            input_filter: "int"
+            awidth: "75dp"
+            hint_text: "12"
+            key: 'setting-m3u8_sleep'
+
+    OSV2I3:
+        text1: 'Generate HLS M3U8'
+        text2: 'default: True'
+        text0: 'Generiert 2. M3U8 Liste (<county>_hls.m3u8)'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-m3u8_hls'
+
+    OSV2I3:
+        text1: 'Vavoo Channel Namen ersetzen'
+        text2: 'default: True'
+        text0: 'Ändert die Anzeigenamen in M3U8 Lists'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-m3u8_name'
+
+    OSV2H:
+        text: 'Programm Zeitschrift (EPG)'
+
+    OSV2I2:
+        text1: 'Provider to get EPG Infos'
+        text2: 'default: Magenta'
+        awidth: "100dp"
+
+        OSB:
+            text: 'Magenta'
+            val: 'm'
+            text0: 'TvSpielfilme'
+            val0: 't'
+            key: 'setting-epg_provider'
+
+    OSV2I2:
+        text1: 'Provider IDs mit Rytec IDs ersetzen'
+        text2: 'default: True'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-epg_rytec'
+
+    OSV2I2:
+        text1: 'Bevorzugte Channel Logos'
+        text2: 'default: Provider'
+        awidth: "100dp"
+
+        OSB:
+            text: 'Provider'
+            val: 'p'
+            text0: 'Original'
+            val0: 'o'
+            key: 'setting-epg_logos'
+
+    OSV2H:
+        text: 'EPG Service Settings'
+
+    OSV2I3:
+        text0: 'Background Service'
+        text1: 'Start Automatic epg.xml.gz Creation for LiveTV'
+        text2: 'default: False'
+        awidth: "60dp"
+
+        OSW:
+            key: 'setting-epg_service'
+
+    OSV2I3:
+        text1: 'Wartezeit für epg.xml.gz Creation Service'
+        text2: 'default: 5'
+        text0: 'Background Service Wartezeit in Tagen'
+        awidth: "75dp"
+
+        OTF:
+            input_filter: "int"
+            awidth: "75dp"
+            hint_text: "5"
+            key: 'setting-epg_sleep'
+
+    OSV2I3:
+        text1: 'Anzahl an Tagen für epg.xml.gz Erstellung'
+        text2: 'default: 7'
+        text0: 'Background Service Grabbing Zeit in Tagen'
+        awidth: "75dp"
+
+        OTF:
+            input_filter: "int"
+            awidth: "75dp"
+            hint_text: "7"
+            key: 'setting-epg_grab'
+

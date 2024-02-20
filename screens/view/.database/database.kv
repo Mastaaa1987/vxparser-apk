@@ -1,0 +1,21 @@
+#:import Window kivy.core.window.Window
+#:import FocusWithColor applib.focus.FocusWithColor
+
+<DSV@M3SmartView>
+<DSVT@M3SmartTile>
+<DSVB@M3SmartBox>
+<DSVC@M3SmartCard>
+<DS@M3Spinner>
+<DH@Header>
+
+<DatabaseScreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 1, 1
+        md_bg_color: "#131314"
+
+        MDScrollView:
+
+            MDList:
+                id: list
+
